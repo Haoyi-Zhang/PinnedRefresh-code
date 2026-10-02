@@ -1,0 +1,21 @@
+{
+  "allowed": [
+    true
+  ],
+  "charges": [
+    1
+  ],
+  "exposures": [
+    2,
+    1
+  ],
+  "mandatory": [
+    true
+  ],
+  "max_refreshes": 1,
+  "pins": [
+    2
+  ],
+  "pool_size": 5,
+  "threshold": 4
+}

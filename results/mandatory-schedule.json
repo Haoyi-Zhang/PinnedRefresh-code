@@ -1,0 +1,45 @@
+{
+  "actual_refresh_count": 1,
+  "added_cost": 0,
+  "capacity": {
+    "capacity": 3,
+    "left": [
+      0,
+      2
+    ],
+    "local": [
+      3,
+      3
+    ],
+    "pivot": 0,
+    "right": [
+      1,
+      0
+    ]
+  },
+  "certificate_boundaries": [],
+  "certificate_cuts": [
+    0,
+    2
+  ],
+  "cost": 1,
+  "cuts": [
+    0,
+    2
+  ],
+  "effective_pin_budgets": [
+    2
+  ],
+  "interval_costs": [
+    3
+  ],
+  "kind": "schedule",
+  "mandatory_cost": 1,
+  "mandatory_refresh_boundaries": [
+    1
+  ],
+  "max_refreshes": 1,
+  "refresh_boundaries": [
+    1
+  ]
+}

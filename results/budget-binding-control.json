@@ -1,0 +1,54 @@
+{
+  "budget_level_mutated_accepted": false,
+  "budget_level_original_accepted": true,
+  "capacity": 3,
+  "case_id": "variable-budget-00",
+  "coordinate_pool": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "exposures": [
+    2,
+    0,
+    2
+  ],
+  "first_pin_budget": 1,
+  "full_corpus_mutated_accepted": false,
+  "full_corpus_original_accepted": true,
+  "interpretation": "The algebraic trace helper intentionally lacks public-instance budgets; the budget-level verifier binds b, u, threshold/capacity, and the coordinate pool.",
+  "mutated_first_pin_set": [
+    3,
+    4
+  ],
+  "original_first_pin_set": [
+    3
+  ],
+  "pin_budgets": [
+    1,
+    1
+  ],
+  "trace_level_mutated_accepted": true,
+  "trace_level_original_accepted": true
+}

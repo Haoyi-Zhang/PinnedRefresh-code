@@ -1,0 +1,33 @@
+{
+  "field": 7,
+  "threshold": 3,
+  "epochs": 2,
+  "observations": [
+    {
+      "kind": "snapshot",
+      "epoch": 0,
+      "x": 1
+    },
+    {
+      "kind": "snapshot",
+      "epoch": 0,
+      "x": 2
+    },
+    {
+      "kind": "snapshot",
+      "epoch": 1,
+      "x": 3
+    },
+    {
+      "kind": "snapshot",
+      "epoch": 1,
+      "x": 4
+    },
+    {
+      "kind": "delta",
+      "before": 0,
+      "after": 1,
+      "x": 5
+    }
+  ]
+}
