@@ -3,7 +3,8 @@
   "cpu_seconds": 0.408139728,
   "direct_assignment_evaluations_this_run": 37611,
   "hard_address_space_limit_bytes": 2147483648,
-  "hard_cpu_limit_seconds": 110,
+  "soft_cpu_limit_seconds": 110,
+  "hard_cpu_limit_seconds": 115,
   "largest_exact_assignment_space": 16807,
   "maximum_case_matrix_shape": [
     64,

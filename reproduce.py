@@ -101,7 +101,7 @@ def run(output: Path, reuse_pilot: Path | None = None) -> dict:
                  'reused_pilot_assignments':reused_assignments,'wall_seconds':time.perf_counter()-wall,
                  'cpu_seconds':time.process_time()-cpu,'peak_rss_kib':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
                  'maximum_case_matrix_shape':[64,133], 'largest_exact_assignment_space':16807,
-                 'maximum_field_bit_width':5,'hard_cpu_limit_seconds':110,'hard_address_space_limit_bytes':2*1024**3}
+                 'maximum_field_bit_width':5,'soft_cpu_limit_seconds':110,'hard_cpu_limit_seconds':115,'hard_address_space_limit_bytes':2*1024**3}
     atomic_json(output/'certificates.json',records)
     atomic_json(output/'adaptive.json',adaptive)
     atomic_json(output/'summary.json',deterministic)

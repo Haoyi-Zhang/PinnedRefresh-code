@@ -74,7 +74,7 @@ def run(output: Path) -> dict:
                  'wall_seconds':time.perf_counter()-wall,'cpu_seconds':time.process_time()-cpu,
                  'peak_rss_kib':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
                  'maximum_case_matrix_shape':[maxrows,133],'largest_pinned_exact_assignment_space':3125,
-                 'hard_cpu_limit_seconds':110,'hard_address_space_limit_bytes':2*1024**3}
+                 'soft_cpu_limit_seconds':110,'hard_cpu_limit_seconds':115,'hard_address_space_limit_bytes':2*1024**3}
     for name,value in [('certificates',records),('simulation',simulation),('budgets',budgets),('exhaustive',exhaustive),('summary',summary),('measurement',measurement)]:
         write_json(output/(name+'.json'),value)
     with (output/'cadence.csv').open('w',newline='') as f:
