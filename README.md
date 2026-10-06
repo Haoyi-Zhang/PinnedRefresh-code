@@ -58,7 +58,7 @@ python reproduce_pinned.py --output replay-pinned
 python -m unittest discover -s tests -v
 ```
 
-The main runners are sequential, use one worker and no child processes, and enforce a 110-second CPU limit and 2-GiB address-space limit. A fresh final recheck produced:
+The main runners are sequential, use one worker and no child processes, and set a 110-second soft CPU limit, a 115-second hard CPU limit, and a 2-GiB address-space limit. The retained Unix run in `results/` produced:
 
 - 711 generic traces: 375 hiding and 336 revealing;
 - 59 pinned controls: 28 hiding and 31 revealing;
@@ -67,7 +67,7 @@ The main runners are sequential, use one worker and no child processes, and enfo
 - 44,111 complete field assignments in the two main clean runners;
 - 770 rejected false certificate mutations;
 - 42 observation-span metamorphic checks;
-- 41 passing unit tests;
+- 41 passing unit tests in that retained run; the current suite has 47 tests;
 - 80 exhaustively visited interval partitions for retained duality cases;
 - 64 actual subsets of the seven-slot schedule and one retained mandatory-refresh counterexample, all classified by `Gamma(b,u^R)` rather than by forcing their refreshes to be certificate cuts;
 - 3 budget-instance negative controls for an excess pin, an excess exposure, and a threshold mismatch;
@@ -77,7 +77,7 @@ The main runners are sequential, use one worker and no child processes, and enfo
 - 300 constant-budget formula checks, 6,820 fixed-pin same-expression implementation regressions, and a separate fixed-same-`O` rank oracle over 5,120 concrete systems (3,486 revealing) and 253 budgets;
 - 220 horizon inversions on exactly `b=1..4`, `u=0..4`, `k=2..12`, using a bounded scan through `T=12`.
 
-Counting every direct field assignment and each retained outer/oracle check once yields 92,035 obligations under the stated counting convention. This is below the frozen 100,000-obligation retained-evidence ceiling. Historical development and clean-reproduction reruns repeat some obligations and are recorded separately in `results/campaign-accounting.json`; they add no distinct scientific case.
+Counting every direct field assignment and each retained outer/oracle check once yielded 92,035 obligations for that run under the stated counting convention, below its frozen 100,000-obligation retained-evidence ceiling. That historical accounting does not include the six new threshold/pool regression tests. Historical development and clean-reproduction reruns repeat some obligations and are recorded separately in `results/campaign-accounting.json`; repeated runs add no distinct scientific case.
 
 These are finite checks, not a machine-checked proof of the general theorem and not a workload or deployment study. `results/campaign-accounting.json` records the retained counts and separates repeated execution qualification from distinct evidence.
 
@@ -102,7 +102,11 @@ python make_pinned_cases.py --output generated-pinned.json
 python make_budget_cases.py --output generated-budgets.json
 ```
 
-The final recheck parsed each generated JSON file and confirmed equality with the corresponding retained input in `cases/`.
+The retained run parsed each generated JSON file and confirmed equality with the corresponding retained input in `cases/`.
+
+The current 47-test suite passed locally on Windows with Python 3.12.14. A separate bounded local call of the reviewed arithmetic routines reproduced the retained certificates, distributions, budget and oracle outputs, including the 850-trace outcomes and 44,111 field assignments. These local checks do not execute the Unix runner entry points: those entry points require `resource`. Stored Unix timings and resource measurements remain historical and are not replaced by the Windows replay.
+
+`.github/workflows/scientific-checks.yml` is configured for this standalone artifact repository root on Ubuntu 24.04. It runs both finite campaigns, the current tests and generators, and deterministic-output gates within a 300-second whole-replay deadline and per-process resource bounds. Raw output is uploaded with an `always()` step. The workflow has been prepared, not remotely executed; a successful local check is not CI. The existing material-integrity workflow remains a separate syntax/documentation check.
 
 ## Why the checks are structurally different
 
@@ -110,7 +114,7 @@ The final recheck parsed each generated JSON file and confirmed equality with th
 
 `src/oracle.py` directly enumerates independent-epoch polynomial distributions. `src/pinned.py` instead enumerates factored constrained increments and verifies pin invariants. Their conditional-distribution comparisons do not call elimination. The generic snapshot/difference model is a control only; a difference observation is not a substitute for a corrupt participant's complete state.
 
-`src/budgets.py` computes temporal capacities, bottleneck partitions, safe schedules, root certificates, and central-share transport witnesses. `verify_transport` is intentionally trace-level: it checks equality paths and Lagrange weights but knows no public instance. `verify_budget_transport` additionally binds a witness to the original exposure budgets, pin budgets, exact threshold/capacity pair, and explicit coordinate pool. The eight retained variable-budget witnesses pass this stronger entry; controlled excess-pin and excess-exposure mutations still pass the algebraic path helper but are rejected by the budget entry.
+`src/budgets.py` computes temporal capacities, bottleneck partitions, safe schedules, root certificates, and central-share transport witnesses. `verify_transport` is intentionally trace-level: it checks equality paths and Lagrange weights but knows no public instance. `verify_budget_transport` additionally binds a witness to the original exposure budgets, pin budgets, supplied integer threshold, computed capacity, and explicit coordinate pool. It accepts any supported `2 <= k <= min(n, Gamma)`, not only `k = Gamma`; capacity remains uncapped when it exceeds `n`. The pool and declared budgets must obey the bounded model. The eight retained variable-budget witnesses pass this stronger entry; controlled excess-pin and excess-exposure mutations still pass the algebraic path helper but are rejected by the budget entry. `tests/test_budget_transport.py` adds six regression methods for subcapacity thresholds, capacity above the pool size, invalid pools/budgets, exact threshold binding, and altered capacity metadata.
 
 `src/exhaustive_validation.py` supplies local modular-rank, partition, capacity, and actual-subset routines rather than reusing the producer, checker, or pinned encoder. For the public frontier it rank-tests each concrete trace, records the exact size vector of revealing traces, and then applies a componentwise prefix OR: the checked statement is that a revealing trace *exists* within a budget iff `Gamma >= k`. It does not claim that every trace under such a budget reveals. The retained `F_5`, `n=3`, `k=2`, `T=2` trace with `C_0=C_1=O_0={1}` is a hiding regression with path `h_0=h_1=1-Z`, even though its count budget has `Gamma=2`. Scheduler comparison enumerates actual refresh sets and evaluates `Gamma(b,u^R)`, so mandatory refreshes are not silently forced into certificate cuts.
 

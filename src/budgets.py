@@ -560,17 +560,23 @@ def verify_budget_trace(
     try:
         validate_budget(exposures, pins)
         validate_pinned(case)
-        if case["epochs"] != len(exposures) or case["threshold"] != expected_threshold:
+        if (
+            not integer(expected_threshold)
+            or case["epochs"] != len(exposures)
+            or case["threshold"] != expected_threshold
+        ):
             return False
         q = case["field"]
         if (
             not isinstance(coordinate_pool, list)
-            or not coordinate_pool
+            or not expected_threshold <= len(coordinate_pool) <= 24
             or len(coordinate_pool) != len(set(coordinate_pool))
             or any(not integer(x) or not 1 <= x < q for x in coordinate_pool)
         ):
             return False
         pool = set(coordinate_pool)
+        if any(budget > len(pool) for budget in exposures + pins):
+            return False
         if any(len(values) > budget for values, budget in zip(case["exposed"], exposures)):
             return False
         if any(len(values) > budget for values, budget in zip(case["pins"], pins)):
@@ -589,10 +595,19 @@ def verify_budget_transport(
     expected_threshold: int,
     coordinate_pool: list[int],
 ) -> bool:
-    """Verify a transport witness and bind it to ``b``, ``u``, ``Gamma``, and ``X``."""
+    """Bind a transport to ``b``, ``u``, ``Gamma``, ``k`` and ``X`` for any k <= Gamma.
+
+    Capacity is uncapped and can exceed the coordinate-pool size; the actual
+    threshold and the witness's distinct labels must still fit that pool.
+    """
     try:
         gamma = capacities(exposures, pins)["capacity"]
-        if expected_threshold != gamma or record.get("capacity") != gamma:
+        if (
+            not integer(expected_threshold)
+            or expected_threshold > gamma
+            or not integer(record.get("capacity"))
+            or record.get("capacity") != gamma
+        ):
             return False
         if not verify_budget_trace(
             record["case"], exposures, pins, expected_threshold, coordinate_pool
