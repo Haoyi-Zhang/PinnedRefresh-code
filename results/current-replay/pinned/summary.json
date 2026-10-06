@@ -1,0 +1,129 @@
+{
+  "budget_validation": {
+    "budget_binding_negative_controls": 3,
+    "certificate_checks": 88,
+    "exhaustive_partitions": 80,
+    "mandatory_schedule_subsets": 1,
+    "mathematical_budget_cases": 20,
+    "safe_schedule_subsets": 16,
+    "schedule_subsets": 64,
+    "transport_checks": 56,
+    "variable_budget_cases": 8,
+    "variable_concrete_traces": 16
+  },
+  "exact_pinned_assignments": 6250,
+  "formula_rows": 12,
+  "independent_exhaustive_validation": {
+    "capacity_partition_vectors": 2460,
+    "concrete_set_systems": 25600,
+    "constant_closed_form_checks": 300,
+    "dominating_budget_vectors": 2565,
+    "fixed_pin_formula_consistency_checks": 6820,
+    "fixed_pin_rank_budget_vectors": 253,
+    "fixed_pin_rank_concrete_systems": 5120,
+    "fixed_pin_rank_revealing_systems": 3486,
+    "horizon_checked_domain": {
+      "bounded_scan_horizon": "1..12",
+      "exposure": "1..4",
+      "pin": "0..4",
+      "threshold": "2..12"
+    },
+    "horizon_inversion_checks": 220,
+    "mandatory_and_count_scheduler_instances": 505,
+    "revealing_set_systems": 18128,
+    "scheduler_instances": 2145,
+    "single_trace_budget_separation": {
+      "budget_capacity": 2,
+      "concrete_trace_reveals": false,
+      "epochs": 2,
+      "exposed": [
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "field": 5,
+      "hiding_path": [
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "parties": 3,
+      "pins": [
+        [
+          1
+        ]
+      ],
+      "threshold": 2
+    },
+    "threshold_envelope_regressions": 4,
+    "universal_frontier_families": [
+      {
+        "budget_quantifier": "a revealing concrete trace exists within the component-wise budget if and only if Gamma is at least the threshold",
+        "budget_vectors": 2187,
+        "concrete_set_systems": 16384,
+        "epochs": 4,
+        "field": 5,
+        "parties": 2,
+        "revealing_set_systems": 13648,
+        "threshold": 2
+      },
+      {
+        "budget_quantifier": "a revealing concrete trace exists within the component-wise budget if and only if Gamma is at least the threshold",
+        "budget_vectors": 64,
+        "concrete_set_systems": 512,
+        "epochs": 2,
+        "field": 5,
+        "parties": 3,
+        "revealing_set_systems": 426,
+        "threshold": 2
+      },
+      {
+        "budget_quantifier": "a revealing concrete trace exists within the component-wise budget if and only if Gamma is at least the threshold",
+        "budget_vectors": 64,
+        "concrete_set_systems": 512,
+        "epochs": 2,
+        "field": 5,
+        "parties": 3,
+        "revealing_set_systems": 186,
+        "threshold": 3
+      },
+      {
+        "budget_quantifier": "a revealing concrete trace exists within the component-wise budget if and only if Gamma is at least the threshold",
+        "budget_vectors": 125,
+        "concrete_set_systems": 4096,
+        "epochs": 2,
+        "field": 5,
+        "parties": 4,
+        "revealing_set_systems": 2874,
+        "threshold": 3
+      },
+      {
+        "budget_quantifier": "a revealing concrete trace exists within the component-wise budget if and only if Gamma is at least the threshold",
+        "budget_vectors": 125,
+        "concrete_set_systems": 4096,
+        "epochs": 2,
+        "field": 5,
+        "parties": 4,
+        "revealing_set_systems": 994,
+        "threshold": 4
+      }
+    ]
+  },
+  "pinned_certificate_checks": 59,
+  "pinned_exact_trace_count": 2,
+  "pinned_trace_count": 59,
+  "pinned_verdict_counts": {
+    "hiding": 28,
+    "revealing": 31
+  },
+  "real_and_ideal_message_assignments": 250,
+  "rejected_pinned_mutations": 59
+}

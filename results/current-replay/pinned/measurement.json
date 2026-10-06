@@ -1,0 +1,16 @@
+{
+  "child_processes": 0,
+  "cpu_seconds": 2.398453888,
+  "direct_assignment_evaluations_this_run": 6500,
+  "hard_address_space_limit_bytes": 2147483648,
+  "hard_cpu_limit_seconds": 115,
+  "largest_pinned_exact_assignment_space": 3125,
+  "maximum_case_matrix_shape": [
+    328,
+    133
+  ],
+  "peak_rss_kib": 17608,
+  "soft_cpu_limit_seconds": 110,
+  "wall_seconds": 2.4027649040000014,
+  "workers": 1
+}

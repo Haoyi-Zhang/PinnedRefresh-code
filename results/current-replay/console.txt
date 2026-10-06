@@ -1,0 +1,234 @@
+{
+  "check": "repository-material-integrity",
+  "python_sources_parsed": 27,
+  "research_sources_present": 26,
+  "minimum_supplied_sources": 24,
+  "usage_document_present": true,
+  "errors": [],
+  "scope": "Documentation and source/configuration integrity only. Research programs, proofs and experiments are not executed."
+}
+{
+  "trace_count": 711,
+  "verdict_counts": {
+    "hiding": 375,
+    "revealing": 336
+  },
+  "measurement": {
+    "workers": 1,
+    "child_processes": 0,
+    "direct_assignment_evaluations_this_run": 37611,
+    "reused_pilot_assignments": 0,
+    "wall_seconds": 0.8116785560000039,
+    "cpu_seconds": 0.806505478,
+    "peak_rss_kib": 22308,
+    "maximum_case_matrix_shape": [
+      64,
+      133
+    ],
+    "largest_exact_assignment_space": 16807,
+    "maximum_field_bit_width": 5,
+    "soft_cpu_limit_seconds": 110,
+    "hard_cpu_limit_seconds": 115,
+    "hard_address_space_limit_bytes": 2147483648
+  }
+}
+{
+  "summary": {
+    "pinned_trace_count": 59,
+    "pinned_verdict_counts": {
+      "revealing": 31,
+      "hiding": 28
+    },
+    "pinned_exact_trace_count": 2,
+    "exact_pinned_assignments": 6250,
+    "real_and_ideal_message_assignments": 250,
+    "pinned_certificate_checks": 59,
+    "rejected_pinned_mutations": 59,
+    "budget_validation": {
+      "mathematical_budget_cases": 20,
+      "exhaustive_partitions": 80,
+      "variable_budget_cases": 8,
+      "variable_concrete_traces": 16,
+      "schedule_subsets": 64,
+      "safe_schedule_subsets": 16,
+      "mandatory_schedule_subsets": 1,
+      "certificate_checks": 88,
+      "transport_checks": 56,
+      "budget_binding_negative_controls": 3
+    },
+    "independent_exhaustive_validation": {
+      "capacity_partition_vectors": 2460,
+      "concrete_set_systems": 25600,
+      "revealing_set_systems": 18128,
+      "dominating_budget_vectors": 2565,
+      "scheduler_instances": 2145,
+      "mandatory_and_count_scheduler_instances": 505,
+      "constant_closed_form_checks": 300,
+      "fixed_pin_formula_consistency_checks": 6820,
+      "fixed_pin_rank_concrete_systems": 5120,
+      "fixed_pin_rank_revealing_systems": 3486,
+      "fixed_pin_rank_budget_vectors": 253,
+      "horizon_inversion_checks": 220,
+      "horizon_checked_domain": {
+        "exposure": "1..4",
+        "pin": "0..4",
+        "threshold": "2..12",
+        "bounded_scan_horizon": "1..12"
+      },
+      "threshold_envelope_regressions": 4,
+      "single_trace_budget_separation": {
+        "field": 5,
+        "parties": 3,
+        "threshold": 2,
+        "epochs": 2,
+        "exposed": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "pins": [
+          [
+            1
+          ]
+        ],
+        "budget_capacity": 2,
+        "concrete_trace_reveals": false,
+        "hiding_path": [
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            4
+          ]
+        ]
+      },
+      "universal_frontier_families": [
+        {
+          "parties": 2,
+          "threshold": 2,
+          "epochs": 4,
+          "field": 5,
+          "concrete_set_systems": 16384,
+          "revealing_set_systems": 13648,
+          "budget_vectors": 2187,
+          "budget_quantifier": "a revealing concrete trace exists within the component-wise budget if and only if Gamma is at least the threshold"
+        },
+        {
+          "parties": 3,
+          "threshold": 2,
+          "epochs": 2,
+          "field": 5,
+          "concrete_set_systems": 512,
+          "revealing_set_systems": 426,
+          "budget_vectors": 64,
+          "budget_quantifier": "a revealing concrete trace exists within the component-wise budget if and only if Gamma is at least the threshold"
+        },
+        {
+          "parties": 3,
+          "threshold": 3,
+          "epochs": 2,
+          "field": 5,
+          "concrete_set_systems": 512,
+          "revealing_set_systems": 186,
+          "budget_vectors": 64,
+          "budget_quantifier": "a revealing concrete trace exists within the component-wise budget if and only if Gamma is at least the threshold"
+        },
+        {
+          "parties": 4,
+          "threshold": 3,
+          "epochs": 2,
+          "field": 5,
+          "concrete_set_systems": 4096,
+          "revealing_set_systems": 2874,
+          "budget_vectors": 125,
+          "budget_quantifier": "a revealing concrete trace exists within the component-wise budget if and only if Gamma is at least the threshold"
+        },
+        {
+          "parties": 4,
+          "threshold": 4,
+          "epochs": 2,
+          "field": 5,
+          "concrete_set_systems": 4096,
+          "revealing_set_systems": 994,
+          "budget_vectors": 125,
+          "budget_quantifier": "a revealing concrete trace exists within the component-wise budget if and only if Gamma is at least the threshold"
+        }
+      ]
+    },
+    "formula_rows": 12
+  },
+  "measurement": {
+    "workers": 1,
+    "child_processes": 0,
+    "direct_assignment_evaluations_this_run": 6500,
+    "wall_seconds": 2.4027649040000014,
+    "cpu_seconds": 2.398453888,
+    "peak_rss_kib": 17608,
+    "maximum_case_matrix_shape": [
+      328,
+      133
+    ],
+    "largest_pinned_exact_assignment_space": 3125,
+    "soft_cpu_limit_seconds": 110,
+    "hard_cpu_limit_seconds": 115,
+    "hard_address_space_limit_bytes": 2147483648
+  }
+}
+test_capacity_metadata_remains_bound (test_budget_transport.BudgetTransportContract.test_capacity_metadata_remains_bound) ... ok
+test_declared_budgets_fit_explicit_pool (test_budget_transport.BudgetTransportContract.test_declared_budgets_fit_explicit_pool) ... ok
+test_every_supported_threshold_below_capacity (test_budget_transport.BudgetTransportContract.test_every_supported_threshold_below_capacity) ... ok
+test_expected_threshold_is_exact_and_integral (test_budget_transport.BudgetTransportContract.test_expected_threshold_is_exact_and_integral) ... ok
+test_explicit_pool_obeys_threshold_and_coordinate_cap (test_budget_transport.BudgetTransportContract.test_explicit_pool_obeys_threshold_and_coordinate_cap) ... ok
+test_uncapped_capacity_may_exceed_pool (test_budget_transport.BudgetTransportContract.test_uncapped_capacity_may_exceed_pool) ... ok
+test_bad_epoch (test_contract.ContractTests.test_bad_epoch) ... ok
+test_boolean_not_integer (test_contract.ContractTests.test_boolean_not_integer) ... ok
+test_certificate_boolean (test_contract.ContractTests.test_certificate_boolean) ... ok
+test_certificate_extra_field (test_contract.ContractTests.test_certificate_extra_field) ... ok
+test_certificate_noncanonical (test_contract.ContractTests.test_certificate_noncanonical) ... ok
+test_composite_field (test_contract.ContractTests.test_composite_field) ... ok
+test_empty (test_contract.ContractTests.test_empty) ... ok
+test_missing_certificate (test_contract.ContractTests.test_missing_certificate) ... ok
+test_mutated_hiding (test_contract.ContractTests.test_mutated_hiding) ... ok
+test_mutated_revealing (test_contract.ContractTests.test_mutated_revealing) ... ok
+test_no_producer_import_in_checker (test_contract.ContractTests.test_no_producer_import_in_checker) ... ok
+test_observation_limit (test_contract.ContractTests.test_observation_limit) ... ok
+test_reversed_delta (test_contract.ContractTests.test_reversed_delta) ... ok
+test_unknown_field (test_contract.ContractTests.test_unknown_field) ... ok
+test_wrong_certificate_shape (test_contract.ContractTests.test_wrong_certificate_shape) ... ok
+test_zero_coordinate (test_contract.ContractTests.test_zero_coordinate) ... ok
+test_adaptive_assignment_count_has_no_unused_randomness (test_exhaustive_validation.ExhaustiveOracleContract.test_adaptive_assignment_count_has_no_unused_randomness) ... ok
+test_brute_partition (test_exhaustive_validation.ExhaustiveOracleContract.test_brute_partition) ... ok
+test_brute_schedule_with_forbidden_boundary (test_exhaustive_validation.ExhaustiveOracleContract.test_brute_schedule_with_forbidden_boundary) ... ok
+test_closed_form_helpers (test_exhaustive_validation.ExhaustiveOracleContract.test_closed_form_helpers) ... ok
+test_independent_rank_hiding (test_exhaustive_validation.ExhaustiveOracleContract.test_independent_rank_hiding) ... ok
+test_independent_rank_revealing (test_exhaustive_validation.ExhaustiveOracleContract.test_independent_rank_revealing) ... ok
+test_mandatory_refresh_need_not_be_a_certificate_cut (test_exhaustive_validation.ExhaustiveOracleContract.test_mandatory_refresh_need_not_be_a_certificate_cut) ... ok
+test_refresh_limit_counts_actual_union (test_exhaustive_validation.ExhaustiveOracleContract.test_refresh_limit_counts_actual_union) ... ok
+test_threshold_envelope_can_be_empty (test_exhaustive_validation.ExhaustiveOracleContract.test_threshold_envelope_can_be_empty) ... ok
+test_threshold_envelope_keeps_zero_exposure_and_k_at_least_two (test_exhaustive_validation.ExhaustiveOracleContract.test_threshold_envelope_keeps_zero_exposure_and_k_at_least_two) ... ok
+test_unsafe_budget_can_contain_a_hiding_concrete_trace (test_exhaustive_validation.ExhaustiveOracleContract.test_unsafe_budget_can_contain_a_hiding_concrete_trace) ... ok
+test_balanced_cut (test_pinned.PinnedContract.test_balanced_cut) ... ok
+test_budget_transport_accepts_original_and_rejects_over_budget_pin (test_pinned.PinnedContract.test_budget_transport_accepts_original_and_rejects_over_budget_pin) ... ok
+test_budget_transport_rejects_over_budget_exposure (test_pinned.PinnedContract.test_budget_transport_rejects_over_budget_exposure) ... ok
+test_budget_transport_rejects_threshold_mismatch (test_pinned.PinnedContract.test_budget_transport_rejects_threshold_mismatch) ... ok
+test_duplicate_pins_rejected (test_pinned.PinnedContract.test_duplicate_pins_rejected) ... ok
+test_empty_pin_increment (test_pinned.PinnedContract.test_empty_pin_increment) ... ok
+test_explicit_offline_schedule (test_pinned.PinnedContract.test_explicit_offline_schedule) ... ok
+test_false_root_certificate (test_pinned.PinnedContract.test_false_root_certificate) ... ok
+test_forbidden_boundaries (test_pinned.PinnedContract.test_forbidden_boundaries) ... ok
+test_full_budget_entry_rejects_over_budget_mutation (test_pinned.PinnedContract.test_full_budget_entry_rejects_over_budget_mutation) ... ok
+test_pin_budget_separate (test_pinned.PinnedContract.test_pin_budget_separate) ... ok
+test_saturated_pins (test_pinned.PinnedContract.test_saturated_pins) ... ok
+test_transport_mutation (test_pinned.PinnedContract.test_transport_mutation) ... ok
+test_zero_observations (test_pinned.PinnedContract.test_zero_observations) ... ok
+
+----------------------------------------------------------------------
+Ran 47 tests in 0.016s
+
+OK
+{"deterministic_json_comparisons": 11, "cadence_rows_match": true, "scope": "Finite semantic replay only; host timings and general proof quantifiers are not verified."}

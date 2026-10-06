@@ -1,0 +1,3257 @@
+[
+  {
+    "id": "pinned-switch",
+    "family": "exact-control",
+    "case": {
+      "field": 5,
+      "threshold": 3,
+      "epochs": 3,
+      "pins": [
+        [
+          1
+        ],
+        [
+          3
+        ]
+      ],
+      "exposed": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": true
+  },
+  {
+    "id": "pinned-fixed",
+    "family": "exact-control",
+    "case": {
+      "field": 5,
+      "threshold": 3,
+      "epochs": 3,
+      "pins": [
+        [
+          1
+        ],
+        [
+          1
+        ]
+      ],
+      "exposed": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": true
+  },
+  {
+    "id": "pinned-lower-00",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 2,
+      "epochs": 1,
+      "pins": [],
+      "exposed": [
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-01",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 2,
+      "epochs": 2,
+      "pins": [
+        [
+          1
+        ]
+      ],
+      "exposed": [
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-02",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 2,
+      "epochs": 1,
+      "pins": [],
+      "exposed": [
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-03",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 2,
+      "epochs": 2,
+      "pins": [
+        [
+          1
+        ]
+      ],
+      "exposed": [
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-04",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 2,
+      "epochs": 1,
+      "pins": [],
+      "exposed": [
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-05",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 2,
+      "epochs": 2,
+      "pins": [
+        [
+          1
+        ]
+      ],
+      "exposed": [
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-06",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 2,
+      "epochs": 1,
+      "pins": [],
+      "exposed": [
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-07",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 3,
+      "epochs": 3,
+      "pins": [
+        [
+          1
+        ],
+        [
+          3
+        ]
+      ],
+      "exposed": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-08",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 3,
+      "epochs": 2,
+      "pins": [
+        [
+          1
+        ]
+      ],
+      "exposed": [
+        [
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-09",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 3,
+      "epochs": 3,
+      "pins": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exposed": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-10",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 3,
+      "epochs": 2,
+      "pins": [
+        [
+          1
+        ]
+      ],
+      "exposed": [
+        [
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-11",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 3,
+      "epochs": 3,
+      "pins": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "exposed": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-12",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 3,
+      "epochs": 2,
+      "pins": [
+        [
+          1
+        ]
+      ],
+      "exposed": [
+        [
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-13",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 4,
+      "epochs": 3,
+      "pins": [
+        [
+          1
+        ],
+        [
+          4
+        ]
+      ],
+      "exposed": [
+        [
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-14",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 4,
+      "epochs": 4,
+      "pins": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          4
+        ]
+      ],
+      "exposed": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-15",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 4,
+      "epochs": 2,
+      "pins": [
+        [
+          1,
+          2
+        ]
+      ],
+      "exposed": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-16",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 4,
+      "epochs": 4,
+      "pins": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "exposed": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-17",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 4,
+      "epochs": 2,
+      "pins": [
+        [
+          1,
+          2
+        ]
+      ],
+      "exposed": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-18",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 5,
+      "epochs": 5,
+      "pins": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "exposed": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-19",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 5,
+      "epochs": 3,
+      "pins": [
+        [
+          1,
+          2
+        ],
+        [
+          5
+        ]
+      ],
+      "exposed": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-20",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 5,
+      "epochs": 5,
+      "pins": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          5
+        ]
+      ],
+      "exposed": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-21",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 5,
+      "epochs": 3,
+      "pins": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ]
+      ],
+      "exposed": [
+        [
+          1,
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4,
+          5
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-22",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 6,
+      "epochs": 3,
+      "pins": [
+        [
+          1,
+          2
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "exposed": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          5,
+          6
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-23",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 6,
+      "epochs": 6,
+      "pins": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "exposed": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-24",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 6,
+      "epochs": 4,
+      "pins": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          6
+        ]
+      ],
+      "exposed": [
+        [
+          1,
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-25",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 7,
+      "epochs": 7,
+      "pins": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          5,
+          6,
+          7
+        ],
+        [
+          5,
+          6,
+          7
+        ],
+        [
+          5,
+          6,
+          7
+        ]
+      ],
+      "exposed": [
+        [
+          1
+        ],
+        [
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ],
+        [
+          5
+        ],
+        [
+          6
+        ],
+        [
+          7
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-26",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 7,
+      "epochs": 4,
+      "pins": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "exposed": [
+        [
+          1,
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-lower-27",
+    "family": "lower-bound",
+    "case": {
+      "field": 11,
+      "threshold": 8,
+      "epochs": 5,
+      "pins": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          6,
+          7,
+          8
+        ],
+        [
+          6,
+          7,
+          8
+        ]
+      ],
+      "exposed": [
+        [
+          1,
+          2
+        ],
+        [
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-upper-00",
+    "family": "strict-upper-bound",
+    "case": {
+      "field": 29,
+      "threshold": 7,
+      "epochs": 4,
+      "pins": [
+        [
+          2,
+          22
+        ],
+        [
+          7,
+          14
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "exposed": [
+        [
+          20,
+          23
+        ],
+        [
+          19,
+          22
+        ],
+        [
+          16,
+          20
+        ],
+        [
+          3,
+          7
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-upper-01",
+    "family": "strict-upper-bound",
+    "case": {
+      "field": 29,
+      "threshold": 7,
+      "epochs": 5,
+      "pins": [
+        [
+          3,
+          23
+        ],
+        [
+          15,
+          16
+        ],
+        [
+          18,
+          23
+        ],
+        [
+          2,
+          19
+        ]
+      ],
+      "exposed": [
+        [
+          19,
+          22
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          18,
+          23
+        ],
+        [
+          2,
+          16
+        ],
+        [
+          15,
+          17
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-upper-02",
+    "family": "strict-upper-bound",
+    "case": {
+      "field": 29,
+      "threshold": 7,
+      "epochs": 6,
+      "pins": [
+        [
+          4,
+          16
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          5,
+          19
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      "exposed": [
+        [
+          8,
+          11
+        ],
+        [
+          6,
+          24
+        ],
+        [
+          11,
+          24
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          23
+        ],
+        [
+          8,
+          17
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-upper-03",
+    "family": "strict-upper-bound",
+    "case": {
+      "field": 29,
+      "threshold": 7,
+      "epochs": 7,
+      "pins": [
+        [
+          4,
+          15
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          23,
+          24
+        ],
+        [
+          8,
+          14
+        ],
+        [
+          3,
+          15
+        ]
+      ],
+      "exposed": [
+        [
+          5,
+          6
+        ],
+        [
+          3,
+          19
+        ],
+        [
+          7,
+          22
+        ],
+        [
+          3,
+          14
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          7,
+          12
+        ],
+        [
+          3,
+          6
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-upper-04",
+    "family": "strict-upper-bound",
+    "case": {
+      "field": 29,
+      "threshold": 7,
+      "epochs": 8,
+      "pins": [
+        [
+          7,
+          14
+        ],
+        [
+          2,
+          17
+        ],
+        [
+          23,
+          24
+        ],
+        [
+          3,
+          19
+        ],
+        [
+          7,
+          20
+        ],
+        [
+          17,
+          19
+        ],
+        [
+          4,
+          9
+        ]
+      ],
+      "exposed": [
+        [
+          4,
+          22
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          6,
+          21
+        ],
+        [
+          7,
+          17
+        ],
+        [
+          6,
+          12
+        ],
+        [
+          15,
+          21
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          16,
+          22
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-upper-05",
+    "family": "strict-upper-bound",
+    "case": {
+      "field": 29,
+      "threshold": 7,
+      "epochs": 4,
+      "pins": [
+        [
+          13,
+          19
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          3,
+          13
+        ]
+      ],
+      "exposed": [
+        [
+          2,
+          8
+        ],
+        [
+          16,
+          19
+        ],
+        [
+          4,
+          15
+        ],
+        [
+          13,
+          20
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-upper-06",
+    "family": "strict-upper-bound",
+    "case": {
+      "field": 29,
+      "threshold": 7,
+      "epochs": 5,
+      "pins": [
+        [
+          13,
+          22
+        ],
+        [
+          5,
+          18
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          9,
+          16
+        ]
+      ],
+      "exposed": [
+        [
+          3,
+          6
+        ],
+        [
+          7,
+          21
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          1,
+          21
+        ],
+        [
+          15,
+          20
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-upper-07",
+    "family": "strict-upper-bound",
+    "case": {
+      "field": 29,
+      "threshold": 7,
+      "epochs": 6,
+      "pins": [
+        [
+          3,
+          7
+        ],
+        [
+          6,
+          20
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          19,
+          24
+        ],
+        [
+          2,
+          23
+        ]
+      ],
+      "exposed": [
+        [
+          8,
+          17
+        ],
+        [
+          22,
+          23
+        ],
+        [
+          12,
+          23
+        ],
+        [
+          10,
+          22
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          12,
+          17
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-upper-08",
+    "family": "strict-upper-bound",
+    "case": {
+      "field": 29,
+      "threshold": 7,
+      "epochs": 7,
+      "pins": [
+        [
+          3,
+          16
+        ],
+        [
+          10,
+          21
+        ],
+        [
+          16,
+          22
+        ],
+        [
+          8,
+          21
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          6,
+          13
+        ]
+      ],
+      "exposed": [
+        [
+          20,
+          22
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          7,
+          19
+        ],
+        [
+          22,
+          24
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          10,
+          19
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-upper-09",
+    "family": "strict-upper-bound",
+    "case": {
+      "field": 29,
+      "threshold": 7,
+      "epochs": 8,
+      "pins": [
+        [
+          3,
+          24
+        ],
+        [
+          15,
+          21
+        ],
+        [
+          10,
+          12
+        ],
+        [
+          17,
+          23
+        ],
+        [
+          8,
+          14
+        ],
+        [
+          1,
+          15
+        ],
+        [
+          9,
+          11
+        ]
+      ],
+      "exposed": [
+        [
+          6,
+          12
+        ],
+        [
+          10,
+          21
+        ],
+        [
+          10,
+          19
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          5,
+          13
+        ],
+        [
+          3,
+          24
+        ],
+        [
+          13,
+          15
+        ],
+        [
+          2,
+          7
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-upper-10",
+    "family": "strict-upper-bound",
+    "case": {
+      "field": 29,
+      "threshold": 7,
+      "epochs": 4,
+      "pins": [
+        [
+          16,
+          18
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          9,
+          14
+        ]
+      ],
+      "exposed": [
+        [
+          10,
+          18
+        ],
+        [
+          1,
+          23
+        ],
+        [
+          6,
+          13
+        ],
+        [
+          13,
+          21
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-upper-11",
+    "family": "strict-upper-bound",
+    "case": {
+      "field": 29,
+      "threshold": 7,
+      "epochs": 5,
+      "pins": [
+        [
+          18,
+          22
+        ],
+        [
+          13,
+          18
+        ],
+        [
+          1,
+          22
+        ],
+        [
+          9,
+          10
+        ]
+      ],
+      "exposed": [
+        [
+          23,
+          24
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          1,
+          17
+        ],
+        [
+          8,
+          17
+        ],
+        [
+          9,
+          21
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-upper-12",
+    "family": "strict-upper-bound",
+    "case": {
+      "field": 29,
+      "threshold": 7,
+      "epochs": 6,
+      "pins": [
+        [
+          13,
+          14
+        ],
+        [
+          20,
+          24
+        ],
+        [
+          11,
+          13
+        ],
+        [
+          6,
+          13
+        ],
+        [
+          13,
+          23
+        ]
+      ],
+      "exposed": [
+        [
+          18,
+          21
+        ],
+        [
+          21,
+          22
+        ],
+        [
+          3,
+          21
+        ],
+        [
+          9,
+          24
+        ],
+        [
+          13,
+          20
+        ],
+        [
+          6,
+          8
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-upper-13",
+    "family": "strict-upper-bound",
+    "case": {
+      "field": 29,
+      "threshold": 7,
+      "epochs": 7,
+      "pins": [
+        [
+          6,
+          21
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          24
+        ],
+        [
+          12,
+          18
+        ],
+        [
+          11,
+          19
+        ],
+        [
+          2,
+          9
+        ]
+      ],
+      "exposed": [
+        [
+          20,
+          23
+        ],
+        [
+          3,
+          16
+        ],
+        [
+          12,
+          22
+        ],
+        [
+          4,
+          13
+        ],
+        [
+          18,
+          22
+        ],
+        [
+          17,
+          21
+        ],
+        [
+          7,
+          17
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-upper-14",
+    "family": "strict-upper-bound",
+    "case": {
+      "field": 29,
+      "threshold": 7,
+      "epochs": 8,
+      "pins": [
+        [
+          2,
+          14
+        ],
+        [
+          3,
+          21
+        ],
+        [
+          1,
+          12
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          9,
+          24
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          15
+        ]
+      ],
+      "exposed": [
+        [
+          19,
+          21
+        ],
+        [
+          10,
+          23
+        ],
+        [
+          9,
+          16
+        ],
+        [
+          15,
+          22
+        ],
+        [
+          13,
+          24
+        ],
+        [
+          7,
+          18
+        ],
+        [
+          10,
+          22
+        ],
+        [
+          7,
+          22
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-upper-15",
+    "family": "strict-upper-bound",
+    "case": {
+      "field": 29,
+      "threshold": 7,
+      "epochs": 4,
+      "pins": [
+        [
+          6,
+          18
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "exposed": [
+        [
+          8,
+          20
+        ],
+        [
+          13,
+          20
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          10,
+          19
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-upper-16",
+    "family": "strict-upper-bound",
+    "case": {
+      "field": 29,
+      "threshold": 7,
+      "epochs": 5,
+      "pins": [
+        [
+          5,
+          16
+        ],
+        [
+          3,
+          24
+        ],
+        [
+          7,
+          15
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "exposed": [
+        [
+          9,
+          15
+        ],
+        [
+          1,
+          12
+        ],
+        [
+          11,
+          16
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          1,
+          3
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-upper-17",
+    "family": "strict-upper-bound",
+    "case": {
+      "field": 29,
+      "threshold": 7,
+      "epochs": 6,
+      "pins": [
+        [
+          9,
+          21
+        ],
+        [
+          5,
+          19
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          13,
+          19
+        ]
+      ],
+      "exposed": [
+        [
+          1,
+          17
+        ],
+        [
+          9,
+          19
+        ],
+        [
+          15,
+          21
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          6,
+          24
+        ],
+        [
+          3,
+          14
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-upper-18",
+    "family": "strict-upper-bound",
+    "case": {
+      "field": 29,
+      "threshold": 7,
+      "epochs": 7,
+      "pins": [
+        [
+          5,
+          18
+        ],
+        [
+          4,
+          24
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          1,
+          14
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          5,
+          12
+        ]
+      ],
+      "exposed": [
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          7,
+          19
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          21,
+          23
+        ],
+        [
+          11,
+          16
+        ],
+        [
+          10,
+          20
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-upper-19",
+    "family": "strict-upper-bound",
+    "case": {
+      "field": 29,
+      "threshold": 7,
+      "epochs": 8,
+      "pins": [
+        [
+          7,
+          19
+        ],
+        [
+          7,
+          15
+        ],
+        [
+          10,
+          23
+        ],
+        [
+          16,
+          22
+        ],
+        [
+          8,
+          24
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          3,
+          24
+        ]
+      ],
+      "exposed": [
+        [
+          8,
+          24
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          3,
+          22
+        ],
+        [
+          23,
+          24
+        ],
+        [
+          6,
+          24
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          6,
+          22
+        ],
+        [
+          3,
+          17
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-upper-20",
+    "family": "strict-upper-bound",
+    "case": {
+      "field": 29,
+      "threshold": 7,
+      "epochs": 4,
+      "pins": [
+        [
+          5,
+          10
+        ],
+        [
+          1,
+          21
+        ],
+        [
+          16,
+          19
+        ]
+      ],
+      "exposed": [
+        [
+          3,
+          17
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          8,
+          18
+        ],
+        [
+          14,
+          15
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-upper-21",
+    "family": "strict-upper-bound",
+    "case": {
+      "field": 29,
+      "threshold": 7,
+      "epochs": 5,
+      "pins": [
+        [
+          6,
+          17
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          11,
+          18
+        ],
+        [
+          7,
+          24
+        ]
+      ],
+      "exposed": [
+        [
+          5,
+          6
+        ],
+        [
+          11,
+          24
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          13,
+          23
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-upper-22",
+    "family": "strict-upper-bound",
+    "case": {
+      "field": 29,
+      "threshold": 7,
+      "epochs": 6,
+      "pins": [
+        [
+          7,
+          14
+        ],
+        [
+          5,
+          20
+        ],
+        [
+          10,
+          22
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          9,
+          21
+        ]
+      ],
+      "exposed": [
+        [
+          5,
+          12
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          18,
+          22
+        ],
+        [
+          8,
+          13
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          13,
+          17
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-upper-23",
+    "family": "strict-upper-bound",
+    "case": {
+      "field": 29,
+      "threshold": 7,
+      "epochs": 7,
+      "pins": [
+        [
+          5,
+          11
+        ],
+        [
+          1,
+          21
+        ],
+        [
+          5,
+          13
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          2,
+          22
+        ]
+      ],
+      "exposed": [
+        [
+          2,
+          23
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          10,
+          12
+        ],
+        [
+          8,
+          16
+        ],
+        [
+          7,
+          18
+        ],
+        [
+          3,
+          13
+        ],
+        [
+          13,
+          22
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-zero-exposure",
+    "family": "zero-exposure",
+    "case": {
+      "field": 7,
+      "threshold": 3,
+      "epochs": 3,
+      "pins": [
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          4
+        ]
+      ],
+      "exposed": [
+        [],
+        [],
+        []
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-max-hidden",
+    "family": "maximum-constraint-shape",
+    "case": {
+      "field": 29,
+      "threshold": 12,
+      "epochs": 12,
+      "pins": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "exposed": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-max-revealed",
+    "family": "maximum-constraint-shape",
+    "case": {
+      "field": 29,
+      "threshold": 12,
+      "epochs": 12,
+      "pins": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      ],
+      "exposed": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-coordinate-5",
+    "family": "coordinate-sensitive",
+    "case": {
+      "field": 7,
+      "threshold": 3,
+      "epochs": 2,
+      "pins": [
+        [
+          5
+        ]
+      ],
+      "exposed": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    "expected": "hiding",
+    "exact_oracle": false
+  },
+  {
+    "id": "pinned-coordinate-6",
+    "family": "coordinate-sensitive",
+    "case": {
+      "field": 7,
+      "threshold": 3,
+      "epochs": 2,
+      "pins": [
+        [
+          6
+        ]
+      ],
+      "exposed": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    "expected": "revealing",
+    "exact_oracle": false
+  }
+]

@@ -1,0 +1,258 @@
+{
+  "capacity_partition_vectors": 2460,
+  "concrete_set_systems": 25600,
+  "constant_closed_form_checks": 300,
+  "dominating_budget_vectors": 2565,
+  "fixed_pin_formula_consistency_checks": 6820,
+  "fixed_pin_rank_budget_vectors": 253,
+  "fixed_pin_rank_concrete_systems": 5120,
+  "fixed_pin_rank_oracle_families": [
+    {
+      "concrete_fixed_pin_systems": 512,
+      "epochs": 2,
+      "field": 5,
+      "fixed_pin_budget_vectors": 64,
+      "parties": 3,
+      "revealing_fixed_pin_systems": 426,
+      "threshold": 2
+    },
+    {
+      "concrete_fixed_pin_systems": 512,
+      "epochs": 2,
+      "field": 5,
+      "fixed_pin_budget_vectors": 64,
+      "parties": 3,
+      "revealing_fixed_pin_systems": 186,
+      "threshold": 3
+    },
+    {
+      "concrete_fixed_pin_systems": 4096,
+      "epochs": 2,
+      "field": 5,
+      "fixed_pin_budget_vectors": 125,
+      "parties": 4,
+      "revealing_fixed_pin_systems": 2874,
+      "threshold": 3
+    }
+  ],
+  "fixed_pin_rank_revealing_systems": 3486,
+  "horizon_checked_domain": {
+    "bounded_scan_horizon": "1..12",
+    "exposure": "1..4",
+    "pin": "0..4",
+    "threshold": "2..12"
+  },
+  "horizon_inversion_checks": 220,
+  "mandatory_and_count_scheduler_instances": 505,
+  "mandatory_counterexample": {
+    "actual_refresh_count": 1,
+    "added_cost": 0,
+    "capacity": {
+      "capacity": 3,
+      "left": [
+        0,
+        2
+      ],
+      "local": [
+        3,
+        3
+      ],
+      "pivot": 0,
+      "right": [
+        1,
+        0
+      ]
+    },
+    "certificate_boundaries": [],
+    "certificate_cuts": [
+      0,
+      2
+    ],
+    "cost": 1,
+    "cuts": [
+      0,
+      2
+    ],
+    "effective_pin_budgets": [
+      2
+    ],
+    "interval_costs": [
+      3
+    ],
+    "kind": "schedule",
+    "mandatory_cost": 1,
+    "mandatory_refresh_boundaries": [
+      1
+    ],
+    "max_refreshes": 1,
+    "refresh_boundaries": [
+      1
+    ]
+  },
+  "method": "local modular rank over concrete set systems; prefix OR for the existential budget quantifier; brute-force interval partitions; brute-force actual refresh subsets evaluated by a local Gamma recurrence",
+  "revealing_set_systems": 18128,
+  "scheduler_instances": 2145,
+  "single_trace_budget_separation": {
+    "budget_capacity": 2,
+    "concrete_trace_reveals": false,
+    "epochs": 2,
+    "exposed": [
+      [
+        1
+      ],
+      [
+        1
+      ]
+    ],
+    "field": 5,
+    "hiding_path": [
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        4
+      ]
+    ],
+    "parties": 3,
+    "pins": [
+      [
+        1
+      ]
+    ],
+    "threshold": 2
+  },
+  "threshold_envelope_regressions": [
+    {
+      "exposures": [
+        0,
+        0,
+        0
+      ],
+      "parties": 5,
+      "pins": [
+        2,
+        2
+      ],
+      "recovery_unavailable": 0,
+      "result": {
+        "capacity": 0,
+        "feasible": true,
+        "maximum_threshold": 5,
+        "minimum_threshold": 2,
+        "thresholds": [
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "exposures": [
+        0
+      ],
+      "parties": 1,
+      "pins": [],
+      "recovery_unavailable": 0,
+      "result": {
+        "capacity": 0,
+        "feasible": false,
+        "maximum_threshold": 1,
+        "minimum_threshold": 2,
+        "thresholds": []
+      }
+    },
+    {
+      "exposures": [
+        1,
+        1
+      ],
+      "parties": 3,
+      "pins": [
+        1
+      ],
+      "recovery_unavailable": 1,
+      "result": {
+        "capacity": 2,
+        "feasible": false,
+        "maximum_threshold": 2,
+        "minimum_threshold": 3,
+        "thresholds": []
+      }
+    },
+    {
+      "exposures": [
+        2,
+        1
+      ],
+      "parties": 5,
+      "pins": [
+        2
+      ],
+      "recovery_unavailable": 1,
+      "result": {
+        "capacity": 3,
+        "feasible": true,
+        "maximum_threshold": 4,
+        "minimum_threshold": 4,
+        "thresholds": [
+          4
+        ]
+      }
+    }
+  ],
+  "universal_frontier_families": [
+    {
+      "budget_quantifier": "a revealing concrete trace exists within the component-wise budget if and only if Gamma is at least the threshold",
+      "budget_vectors": 2187,
+      "concrete_set_systems": 16384,
+      "epochs": 4,
+      "field": 5,
+      "parties": 2,
+      "revealing_set_systems": 13648,
+      "threshold": 2
+    },
+    {
+      "budget_quantifier": "a revealing concrete trace exists within the component-wise budget if and only if Gamma is at least the threshold",
+      "budget_vectors": 64,
+      "concrete_set_systems": 512,
+      "epochs": 2,
+      "field": 5,
+      "parties": 3,
+      "revealing_set_systems": 426,
+      "threshold": 2
+    },
+    {
+      "budget_quantifier": "a revealing concrete trace exists within the component-wise budget if and only if Gamma is at least the threshold",
+      "budget_vectors": 64,
+      "concrete_set_systems": 512,
+      "epochs": 2,
+      "field": 5,
+      "parties": 3,
+      "revealing_set_systems": 186,
+      "threshold": 3
+    },
+    {
+      "budget_quantifier": "a revealing concrete trace exists within the component-wise budget if and only if Gamma is at least the threshold",
+      "budget_vectors": 125,
+      "concrete_set_systems": 4096,
+      "epochs": 2,
+      "field": 5,
+      "parties": 4,
+      "revealing_set_systems": 2874,
+      "threshold": 3
+    },
+    {
+      "budget_quantifier": "a revealing concrete trace exists within the component-wise budget if and only if Gamma is at least the threshold",
+      "budget_vectors": 125,
+      "concrete_set_systems": 4096,
+      "epochs": 2,
+      "field": 5,
+      "parties": 4,
+      "revealing_set_systems": 994,
+      "threshold": 4
+    }
+  ]
+}
