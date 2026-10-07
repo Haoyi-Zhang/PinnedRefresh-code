@@ -68,7 +68,7 @@ Because b_e>=0, if both crossing intervals have weight at most H, at least one o
 
 Set H=Gamma and create an edge a->z whenever a<z and w(a,z)<=H. The pointwise minimum says every slot is covered by some edge interval. Suppose T is unreachable from 0. Let m<T be the largest reachable cut, and fix a path to m. An edge c->d covering slot m has c<=m<d. If c is on the path, extend it to d, contradicting maximality of m. Otherwise c lies strictly inside a path edge a->b, so a<c<b<=m<d. Uncrossing yields a->c or b->d. In the first case a path reaches d via c; in the second it reaches d directly from b. Again this contradicts maximality of m. Therefore T is reachable and W<=H. This proves the identity without bounded enumeration.
 
-A bottleneck recurrence D_0=0 and D_z=min_{a<z} max(D_a,w(a,z)) constructs a partition. Prefix sums and predecessor pointers give an O(T^2) arithmetic implementation. The capacity alone uses two O(T) recurrences. The bounded repository implementation favors simple full paths/direct sums and is O(T^3) in its unrestricted asymptotic interpretation.
+A bottleneck recurrence D_0=0 and D_z=min_{a<z} max(D_a,w(a,z)) constructs a partition. Prefix sums and predecessor pointers give an O(T^2) arithmetic implementation. The capacity alone uses two O(T) recurrences. The bounded repository implementation prepares prefix sums but retains simple full paths, whose copying still gives O(T^3) in its unrestricted asymptotic interpretation. The public direct interval sum and independent enumeration are unchanged.
 
 ## 4. Exact worst-case secrecy and recovery
 

@@ -136,8 +136,21 @@ def interval_cost(exposures: list[int], pins: list[int], a: int, z: int) -> int:
     )
 
 
+def _exposure_prefix(exposures: list[int]) -> tuple[int, ...]:
+    prefix = [0]
+    for value in exposures:
+        prefix.append(prefix[-1] + value)
+    return tuple(prefix)
+
+
+def _prefix_interval_cost(prefix: tuple[int, ...], pins: list[int], a: int, z: int) -> int:
+    # Private callers already validated budgets and generate nonempty intervals.
+    return prefix[z] - prefix[a] + (pins[a - 1] if a else 0) + (pins[z - 1] if z < len(prefix) - 1 else 0)
+
+
 def bottleneck_partition(exposures: list[int], pins: list[int]) -> dict:
     validate_budget(exposures, pins)
+    prefix = _exposure_prefix(exposures)
     epochs = len(exposures)
     value: list[int | None] = [None] * (epochs + 1)
     paths: list[list[int] | None] = [None] * (epochs + 1)
@@ -146,7 +159,7 @@ def bottleneck_partition(exposures: list[int], pins: list[int]) -> dict:
     for stop in range(1, epochs + 1):
         candidates = [
             (
-                max(value[start], interval_cost(exposures, pins, start, stop)),
+                max(value[start], _prefix_interval_cost(prefix, pins, start, stop)),
                 paths[start] + [stop],
             )
             for start in range(stop)
@@ -158,7 +171,7 @@ def bottleneck_partition(exposures: list[int], pins: list[int]) -> dict:
         "width": value[epochs],
         "cuts": paths[epochs],
         "interval_costs": [
-            interval_cost(exposures, pins, start, stop)
+            _prefix_interval_cost(prefix, pins, start, stop)
             for start, stop in zip(paths[epochs], paths[epochs][1:])
         ],
     }
@@ -254,6 +267,8 @@ def minimum_cost_schedule(
             "max_refreshes": max_refreshes,
         }
 
+    prefix = _exposure_prefix(exposures)
+
     # states[z][r] = (additional nonmandatory cost, certificate cut path),
     # where r is the number of nonmandatory actual refreshes introduced by Q.
     states: list[dict[int, tuple[int, list[int]]]] = [dict() for _ in range(epochs + 1)]
@@ -270,7 +285,7 @@ def minimum_cost_schedule(
         add_count = int(stop < epochs and stop not in mandatory_set)
         add_cost = charges[stop - 1] if add_count else 0
         for start in range(stop):
-            if interval_cost(exposures, pins, start, stop) >= threshold:
+            if _prefix_interval_cost(prefix, pins, start, stop) >= threshold:
                 continue
             for used, (cost, path) in states[start].items():
                 next_used = used + add_count
@@ -340,7 +355,7 @@ def minimum_cost_schedule(
         "actual_refresh_count": len(actual_refresh_set),
         "max_refreshes": max_refreshes,
         "interval_costs": [
-            interval_cost(exposures, pins, start, stop)
+            _prefix_interval_cost(prefix, pins, start, stop)
             for start, stop in zip(certificate_path, certificate_path[1:])
         ],
         "effective_pin_budgets": effective,

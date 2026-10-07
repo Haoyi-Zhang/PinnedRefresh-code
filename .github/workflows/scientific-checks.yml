@@ -31,6 +31,7 @@ jobs:
           ulimit -S -t 110
           ulimit -H -t 115
           python -B .github/scripts/check_repository.py
+          python -B tests/regression_prefix_intervals.py -v
           python -B reproduce.py --output .scientific-output/linear
           python -B reproduce_pinned.py --output .scientific-output/pinned
           python -B -m unittest discover -s tests -v
