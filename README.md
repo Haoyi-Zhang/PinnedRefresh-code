@@ -46,7 +46,7 @@ These are transparent operation counts, not an optimality or benchmark claim. Th
 
 Use Python 3.10 or later on Linux or another compatible Unix. The runners use only the standard library and the Unix `resource` module. The executable contract supports prime fields; the written argument permits arbitrary finite fields. Arithmetic uses exact Python integers.
 
-The stored case files are the reproduction inputs. Generators document how they were selected, but regenerated pseudorandom selections are not a substitute for the literal retained inputs.
+The stored case files are the main trace inputs. The sixteen concrete safe-schedule examples are generated from the stored budgets with `random.Random(20260914)`; this fixed-seed selection is part of replay. The other generators document selection of the retained literal trace families.
 
 ## Clean reproduction
 
