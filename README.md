@@ -132,3 +132,19 @@ The local simulation case has field size 5, threshold 3, one pinned coordinate, 
 `proofs/argument.md` is a self-contained written argument for the retained results. `claim_evidence_ledger.csv` maps each material claim to its theorem, proof, executable check, input, and raw result. `literature-calibration.csv` and `literature-calibration.md` preserve the 12+5+5 structured source-calibration matrix and the recorded access depth for each slot. `reference-audit.csv` inventories all cited entries and distinguishes fresh metadata checks from structural-only checks. `external_resources.csv` records scholarly sources, access depth, and integration limits. `PROVENANCE.md` records substantive AI generation and the external-use restrictions.
 
 No theorem prover, independently staffed audit, malicious-party implementation, trusted-erasure mechanism, real service, or human-subject evidence was used. The 12+5+5 matrix records 22 slots over 21 unique works at the access depths stated in the ledger and supports scope-specific interface separation, not a global priority claim. For Chorus, official metadata, abstract, DOI/pages, and public artifact documentation are retained at their actual access depth; the complete paper text was not retrievable here, and no pin-equivalence or protocol-level delta is asserted. Independent human mathematical/source review, authorship/accountability approval, and truthful external-use policy review remain open. This is an internal research artifact, not a certified submission package.
+
+## Vector figure reproduction
+
+The optional `requirements-figures.txt` dependency is separate from the
+standard-library scientific validation. Run `python -B scripts/plot_figures.py`
+after installing it. The command reads the retained `results/pinned/cadence.csv`
+and checks the two stated integer theorem formulas; it runs no experiment.
+It writes `figures/cadence.pdf` and copies identical bytes to an existing sibling
+paper's `figures/` directory. Use `--out` or `--paper-dir` to choose destinations.
+
+The font is Times New Roman when Windows supplies `times.ttf` and `timesi.ttf`.
+On other systems, set `FIGURE_FONT_DIR` to a directory containing those legally
+available files; otherwise Matplotlib's bundled Times-compatible STIX serif is
+the portable fallback. Proprietary font files are not redistributed.
+PDF text and paths remain vector, fonts are embedded, and no TeX engine or model
+API is called. This command does not alter the retained scientific outputs.
