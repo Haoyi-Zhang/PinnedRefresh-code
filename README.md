@@ -67,7 +67,7 @@ The main runners are sequential, use one worker and no child processes, and set 
 - 44,111 complete field assignments in the two main clean runners;
 - 770 rejected false certificate mutations;
 - 42 observation-span metamorphic checks;
-- 41 passing unit tests in that retained run; the current suite has 47 tests;
+- 41 passing unit tests in that retained run; the current discovery suite defines 49 methods, including two additional zero/asymmetric-budget regressions;
 - 80 exhaustively visited interval partitions for retained duality cases;
 - 64 actual subsets of the seven-slot schedule and one retained mandatory-refresh counterexample, all classified by `Gamma(b,u^R)` rather than by forcing their refreshes to be certificate cuts;
 - 3 budget-instance negative controls for an excess pin, an excess exposure, and a threshold mismatch;
