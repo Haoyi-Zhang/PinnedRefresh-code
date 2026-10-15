@@ -122,8 +122,7 @@ computational cross-checks, not a machine-checked general proof or independent
 human review. Chorus full-text access remains unresolved at the depth recorded
 in the source ledgers; no protocol-equivalence or global-priority claim follows.
 
-This artifact includes substantive AI-generated material. `PROVENANCE.md`
-records provenance and external-use restrictions. Accountable human review,
+`PROVENANCE.md` records provenance and external-use restrictions. Accountable human review,
 authorship approval, permissions, and truthful publisher-policy disclosures
 remain prerequisites for external use. Code and synthetic fixtures use
 `LICENSE`; referenced papers and proprietary fonts are not redistributed.
