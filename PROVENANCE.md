@@ -2,7 +2,7 @@
 
 Separate code paths and exact enumerators are computational cross-checks, not independent human review, a formal proof assistant, or a demonstration of human oversight.
 
-The visible manuscript author identities and their order were supplied for the internal draft. No additional contributor, corresponding-author designation, equal-contribution agreement, author approval, institutional permission, or endorsement has been established. Before any external use, accountable human authors must examine the proofs and evidence, determine valid authorship and contributions, secure all required approvals, and make truthful disclosures under the applicable publisher policies. No submission, upload, registration, correspondence, or publication was performed.
+The visible manuscript author identities and their order were supplied for the internal draft. No additional contributor, author approval, institutional permission, or endorsement has been established. Before any external use, accountable human authors must examine the proofs and evidence, determine valid authorship and contributions, secure all required approvals, and make truthful disclosures under the applicable publisher policies. No submission, upload, registration, correspondence, or publication was performed.
 
 All experimental records are benign synthetic field/budget records generated for this project. No private participant, deployed service, external compute, GPU, paid model service, or attack target was used. No source or result was inherited from another unpublished project. Scholarly inputs informed definitions and positioning but were not copied into the code. Referenced PDFs are not redistributed.
 
